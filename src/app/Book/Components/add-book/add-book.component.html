@@ -1,0 +1,10 @@
+<p>add-book works!</p>
+
+<div>
+    <form (ngSubmit)="addBook()">
+        <input [value]="book.title" [(ngModel)]="book.title" type="text" name="title" placeholder="Título del libro">
+        <input [value]="book.countPages" [(ngModel)]="book.countPages" type="number" name="countPages" placeholder="Páginas del libro">
+        <input [value]="book.datePublication" [(ngModel)]="book.datePublication" type="date" name="datePublication" placeholder="Publicación del libro">
+        <button type="submit">Agregar</button>
+    </form>
+</div>

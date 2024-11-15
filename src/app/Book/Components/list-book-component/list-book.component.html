@@ -1,0 +1,12 @@
+<p>list-book-component works!</p>
+
+
+<div>
+    <ul *ngFor="let book of books;let i = index">
+        <li>{{i + 1}}</li>
+        <li>{{book.title}}</li>
+        <li>{{book.countPages}}</li>
+        <li>{{book.datePublication}}</li>
+        <button (click)="onDeleteEmit(i)">Eliminar</button>
+    </ul>
+</div>
