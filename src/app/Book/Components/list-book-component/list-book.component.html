@@ -2,11 +2,14 @@
 
 
 <div>
+    
     <ul *ngFor="let book of books;let i = index">
-        <li>{{i + 1}}</li>
+       
         <li>{{book.title}}</li>
-        <li>{{book.countPages}}</li>
+        <li>{{book.pageNumber}}</li>
         <li>{{book.datePublication}}</li>
-        <button (click)="onDeleteEmit(i)">Eliminar</button>
+        <li>{{book.genero.name}}</li>
+        <li>{{book.author.name}}</li>
+        <li>{{book.id}}</li>
     </ul>
 </div>

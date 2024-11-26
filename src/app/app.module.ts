@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BookModule } from './Book/book.module';
@@ -13,9 +14,10 @@ import { BookModule } from './Book/book.module';
   ],
   imports: [
     BrowserModule,
-    BookModule
+    BookModule,
+  
   ],
-  providers: [],
+  providers:[provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
