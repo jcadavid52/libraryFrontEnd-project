@@ -3,10 +3,10 @@ import { Book, IBook } from '../Interfaces/IBook';
 import { BookService } from '../Services/book.service';
 
 @Component({
-  selector: 'index-page',
-  templateUrl: './index-page.component.html',
+  selector: 'book-page',
+  templateUrl: './book-page.component.html',
 })
-export class IndexPageComponent implements OnInit{
+export class IndexBookPageComponent implements OnInit{
   constructor(private bookService:BookService){
 
   }

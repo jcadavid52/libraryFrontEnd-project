@@ -13,12 +13,15 @@ export class ListBookComponent  {
   @Output()
   public onDeleteBook: EventEmitter<number> = new EventEmitter();
 
-  @Output()
-  public onChangeTitlePage: EventEmitter<string> = new EventEmitter();
 
-  
+
+
 
   // onDeleteEmit(index: number): void {
   //   this.onDeleteBook.emit(index);
   // }
+
+  onReservationEmit(book:Book):void{
+  console.log(book)
+  }
 }
