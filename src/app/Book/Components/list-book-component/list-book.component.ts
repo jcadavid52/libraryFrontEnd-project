@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Book, IBook, IndexBook } from '../../Interfaces/IBook';
+import { Book } from '../../Interfaces/IBook';
 @Component({
   selector: 'list-book-component',
   templateUrl: './list-book.component.html',

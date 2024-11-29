@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { IBook } from '../../Interfaces/IBook';
+import { Book } from '../../Interfaces/IBook';
 
 @Component({
   selector: 'app-add-book',
@@ -9,18 +9,24 @@ import { IBook } from '../../Interfaces/IBook';
 export class AddBookComponent {
 
   @Output()
-  public onNewBook:EventEmitter<IBook> = new EventEmitter();
+  public onNewBook:EventEmitter<Book> = new EventEmitter();
 
-  public book:IBook = {
-    title:'',
-    countPages:0,
-    datePublication:new Date()
-  };
+  // public book:Book = {
+  //   title: '',
+  //   pageNumber: 0,
+  //   datePublication: new Date(),
+  //   id: 0,
+  //   description: '',
+  //   dateCreation: undefined,
+  //   codeReference: '',
+  //   author: undefined,
+  //   genero: undefined
+  // };
 
-  addBook():void{
-    this.onNewBook.emit(this.book);
-    this.book = {title:'',
-      countPages:0,
-      datePublication:new Date()}
-  }
+  // addBook():void{
+  //   this.onNewBook.emit(this.book);
+  //   this.book = {title:'',
+  //     countPages:0,
+  //     datePublication:new Date()}
+  // }
 }

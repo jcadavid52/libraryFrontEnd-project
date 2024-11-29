@@ -1,11 +1,11 @@
-export interface IBook{
-  title:string;
-  countPages:number;
-  datePublication:Date;
-}
+
 
 export interface IndexBook {
   books: Book[];
+}
+
+export interface GetBook{
+  book:Book;
 }
 
 export interface Book {

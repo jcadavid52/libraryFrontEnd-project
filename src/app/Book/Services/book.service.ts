@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Book, IBook, IndexBook } from '../Interfaces/IBook';
+import { Book,GetBook,IndexBook } from '../Interfaces/IBook';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
@@ -31,5 +31,9 @@ export class BookService {
 
   getBookByCategory(idCategory:number):Observable<IndexBook>{
     return this.http.get<IndexBook>(`${url}/GetBooksByCategory?idCategory=${idCategory}`);
+  }
+
+  getBook(idBook:number):Observable<GetBook>{
+    return this.http.get<GetBook>(`${url}/GetBook?id=${idBook}`);
   }
 }

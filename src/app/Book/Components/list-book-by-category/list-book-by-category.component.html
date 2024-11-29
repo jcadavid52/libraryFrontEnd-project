@@ -3,6 +3,7 @@
   <ul *ngFor="let book of books">
     <li>{{ book.title }}</li>
     <li>{{ book.genero.name }}</li>
+    <a routerLink="book/{{book.id}}">Ver</a>
   </ul>
 </div>
 <ng-template #noBooks>

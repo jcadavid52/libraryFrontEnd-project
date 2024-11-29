@@ -22,7 +22,8 @@ import { HomeModule } from './Home/home.module';
     ReservationModule,
     AppRoutingModule,
     SharedModule,
-    HomeModule
+    HomeModule,
+    
   
   ],
   providers:[provideHttpClient()],

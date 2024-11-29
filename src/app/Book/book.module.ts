@@ -6,6 +6,7 @@ import { DetailBookComponent } from './Components/detail-book/detail-book.compon
 import { AddBookComponent } from './Components/add-book/add-book.component';
 import { FormsModule } from '@angular/forms';
 import { ListBookByCategoryComponent } from './Components/list-book-by-category/list-book-by-category.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -20,7 +21,8 @@ import { ListBookByCategoryComponent } from './Components/list-book-by-category/
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports:[
     IndexBookPageComponent,
