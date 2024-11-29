@@ -29,6 +29,7 @@ export class IndexBookPageComponent implements OnInit{
   getBooks(): void {
     this.bookService.getAllBooks()
     .subscribe(resp => {
+      
       this.books = resp.books;
     })
   }

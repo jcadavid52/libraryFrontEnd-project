@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
+const url:string = 'http://localhost:9096/api/Book';
+
 @Injectable({ providedIn: 'root' })
 export class BookService {
  
@@ -24,6 +26,10 @@ export class BookService {
   
 
   getAllBooks(): Observable<IndexBook> {
-    return this.http.get<IndexBook>('http://localhost:9096/api/Book/GetAllBooks');
+    return this.http.get<IndexBook>(url + '/GetAllBooks');
+  }
+
+  getBookByCategory(idCategory:number):Observable<IndexBook>{
+    return this.http.get<IndexBook>(`${url}/GetBooksByCategory?idCategory=${idCategory}`);
   }
 }

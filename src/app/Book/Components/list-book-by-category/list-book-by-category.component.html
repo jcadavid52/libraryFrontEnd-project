@@ -1,0 +1,10 @@
+
+<div *ngIf="books.length > 0; else noBooks">
+  <ul *ngFor="let book of books">
+    <li>{{ book.title }}</li>
+    <li>{{ book.genero.name }}</li>
+  </ul>
+</div>
+<ng-template #noBooks>
+  <p>No hay libros para esta categoría</p>
+</ng-template>
